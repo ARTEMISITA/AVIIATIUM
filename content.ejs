@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>AVIIATIUM</title>
+    <!--Reference Google Fonts-->
+    <link href='https://fonts.googleapis.com/css?family=Aclonica'rel='stylesheet'>
+    <link href='https://fonts.googleapis.com/css?family=Audiowide' rel='stylesheet'>
+    <link href='https://fonts.googleapis.com/css?family=Lato:300,400,700' rel='stylesheet'>
+
+    <!--Reference Social Media Icons-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">    
+    
+    
+    <!--External CSS => 3rd Priority-->
+    <link rel="stylesheet" href="content.CSS">
+ 
+    <!--Add Favicon Icon => https://www.favicon.cc/-->
+    <link rel="icon" href="/img/favicon.ico">
+ 
+</head>
+<body>
+    <main>
+        <header>
+            <div>
+                <img class="logo" src="/img/Logo2-1.png" alt="logo" width="110" height="70">
+                <h1 class="Logo-EVENT">L'AVIIATIUM'</h1>
+                <button class="custom-btn btn-12" onClick="parent.location='http://localhost:8080/contractus'"><span>Click!</span><span>contact us</span></button>
+            </div>
+       </header>
+                <!--Add para meter for each loop-->
+                <% obj_Plane.forEach(function(Plane){ %>
+                    <div class="page2">
+                        <div id='stars'></div>
+                        <div id='stars2'></div>
+                        <div id='stars3'></div>
+                        
+                        
+                        <h2 class="headname"> <%= Plane.name %></h2>
+                        <img class="img" src="<%= Plane.img %> " alt="pic" width="800" height="500">  
+                        <p class="con"> <B> CREW:&nbsp; </B>                  <%= Plane.Crew %></p>
+                        <p class="con"> <B> Fuel Capacity:&nbsp; </B>         <%= Plane.Fuel_Capacity %></p>
+                        <p class="con"> <B> Maximum Speed:&nbsp; </B>         <%= Plane.Maximum_Speed %></p>
+                        <p class="con"> <B> Range:&nbsp; </B>                 <%= Plane.Range %></p>
+                        <p class="con"> <B> Combat Range:&nbsp; </B>          <%= Plane.Combat_Range %></p>
+                        <p class="con"> <B> Service Ceiling:&nbsp; </B>       <%= Plane.Service_Ceiling %></p>
+                        <p class="con"> <B> Guns:&nbsp; </B>                  <%= Plane.Guns %></p>
+                        <p class="con"> <B> Maximum Weapon Capacity:&nbsp; </B>   <%= Plane.Maximum_Weapon_Capacity %></p>
+                    </div>
+                    <% }) %>
+                
+  <footer>
+    <p class="credit">© 2024 By L'AVIIATIUM x AMAVIIRIUM TEAM'</p>
+</footer>
+    </main>
+    
+</body>
+</html>
